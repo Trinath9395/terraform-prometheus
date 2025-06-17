@@ -4,7 +4,7 @@ resource "aws_instance" "prometheus" {
   subnet_id = var.subnet_id
   instance_type = "t2.micro"
 
-  user_data = file("promethues.sh")
+  user_data = file("prometheus.sh")
   iam_instance_profile = aws_iam_instance_profile.prometheus_instance_profile.name
   tags = {
     Name = "prometheus"
