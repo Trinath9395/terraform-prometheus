@@ -1,6 +1,6 @@
 resource "aws_instance" "prometheus" {
   ami =  var.ami
-  vpc_security_group_ids = [var.vpc_security_group_ids]
+  vpc_security_group_ids = [var.vpc_security_group_id]
   subnet_id = var.subnet_id
   instance_type = "t2.micro"
 
@@ -16,7 +16,7 @@ resource "aws_instance" "prometheus" {
 
 resource "aws_instance" "node_exporter" {
   ami = var.ami
-  vpc_security_group_ids = [var.vpc_security_group_ids]
+  vpc_security_group_ids = [var.vpc_security_group_id]
   subnet_id = var.subnet_id
   instance_type = "t2.micro"
 
