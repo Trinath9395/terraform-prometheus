@@ -2,14 +2,18 @@
 PROM_VERSION=3.4.0
 ALERT_MANGER_VERSION=0.28.1
 cd /opt 
+
+# Downloading the prometheus server 
 wget https://github.com/prometheus/prometheus/releases/download/v$PROM_VERSION/prometheus-$PROM_VERSION.linux-amd64.tar.gz
 tar -xf  prometheus-$PROM_VERSION.linux-amd64.tar.gz
 mv prometheus-$PROM_VERSION.linux-amd64 prometheus
 
+# Downloading the Alert manager server 
 wget https://github.com/prometheus/alertmanager/releases/download/v$ALERT_MANGER_VERSION/alertmanager-$ALERT_MANGER_VERSION.linux-amd64.tar.gz
 tar -xf alertmanager-$ALERT_MANGER_VERSION.linux-amd64.tar.gz
 mv alertmanager-$ALERT_MANGER_VERSION.linux-amd64 alertmanager
 
+#Cloning this repo into temp directory
 cd /tmp 
 git clone https://github.com/Trinath9395/terraform-prometheus.git
 cd terraform-prometheus

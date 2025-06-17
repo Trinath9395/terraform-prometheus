@@ -1,6 +1,6 @@
 variable "vpc_security_group_ids" {
-    type = string
-    default = "vpc-0cff62a4c9dcdf272"
+  type = string
+  default = "vpc-0cff62a4c9dcdf272"
 }
 
 variable "subnet_id" {

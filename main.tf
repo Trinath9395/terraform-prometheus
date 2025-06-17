@@ -29,20 +29,20 @@ resource "aws_instance" "node_exporter" {
 }
 
 resource "aws_security_group" "prometheus" {
-  name = "prometheus"
-  description = "Allow TLS inbound and outbound all traffic"
+  name        = "prometheus"
+  description = "Allow TLS inbound traffic and all outbound traffic"
 
-  ingress = {
-    from_port = 0 
-    to_port = 0 
-    protocal = "-1"
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  egress = {
-    from_port = 0 
-    to_port = 0
-    protocal = "-1" 
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
