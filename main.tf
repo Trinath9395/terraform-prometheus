@@ -24,6 +24,7 @@ resource "aws_instance" "node_exporter" {
   
   tags = {
     Name = "node_exporter"
+    Monitering: "true" 
   }
 }
 
