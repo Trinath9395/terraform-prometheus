@@ -1,11 +1,11 @@
 variable "vpc_security_group_id" {
   type = string
-  default = "sg-0e142280b2978f20a"
+  default = "sg-01c6441a49a9f3d18"
 }
 
 variable "subnet_id" {
   type = string
-  default = "subnet-0452ce0b87e65b4ee"
+  default = "subnet-0b439d8814bf5d584"
 }
 
 variable "ami" {

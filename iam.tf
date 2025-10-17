@@ -1,6 +1,6 @@
 # 1. IAM Policy for Prometheus EC2 to Describe Instances
 resource "aws_iam_policy" "prometheus_ec2_describe_policy" {
-  name        = "PrometheusEC2DescribePolicy"
+  name        = "PrometheusEC2DescribeInstances"
   description = "Allows Prometheus EC2 to describe instances to discover scrape targets"
   policy      = jsonencode({
     Version = "2012-10-17",
@@ -20,7 +20,7 @@ resource "aws_iam_policy" "prometheus_ec2_describe_policy" {
 
 # 2. IAM Role for Prometheus EC2
 resource "aws_iam_role" "prometheus_ec2_role" {
-  name = "PrometheusEC2Role"
+  name = "PrometheusEC2Describe"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
