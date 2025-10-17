@@ -24,29 +24,7 @@ resource "aws_instance" "node_exporter" {
   
   tags = {
     Name = "node_exporter"
-    Monitering: "true" 
+    Monitoring: "true" 
   }
 }
 
-resource "aws_security_group" "prometheus" {
-  name        = "prometheus"
-  description = "Allow TLS inbound traffic and all outbound traffic"
-
-  ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = {
-    Name = "prometheus"
-  }
-}

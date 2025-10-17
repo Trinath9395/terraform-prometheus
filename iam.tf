@@ -39,7 +39,7 @@ resource "aws_iam_role" "prometheus_ec2_role" {
 # 3. Attach the policy to the role
 resource "aws_iam_role_policy_attachment" "prometheus_attach_policy" {
   role       = aws_iam_role.prometheus_ec2_role.name
-  policy_arn = aws_iam_policy.prometheus_ec2_describe_policy.arn
+  policy_arn = aws_iam_policy.prometheus_ec2_describe_policy.arn            
 }
 
 # 4. IAM Instance Profile
